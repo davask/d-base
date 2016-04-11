@@ -8,9 +8,11 @@ else
 fi
 
 # declare user dir
-DWL_USER_DIR=/home/${DWL_USER_NAME}
+export DWL_USER_DIR=/home/${DWL_USER_NAME}
+echo "update env ${DWL_USER_DIR}"
 # declare tmp dir
-DWL_USER_DIR_TMP=${DWL_USER_DIR}/tmp
+export DWL_USER_DIR_TMP=${DWL_USER_DIR}/tmp
+echo "update env ${DWL_USER_DIR_TMP}"
 test -d ${DWL_USER_DIR_TMP} || mkdir -p ${DWL_USER_DIR_TMP}
 echo "##### END OF ${DWL_USER_NAME} INIT #####";
 echo "";
