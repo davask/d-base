@@ -1,6 +1,8 @@
 #!/bin/bash
-chmod -R 700 ${DWL_INIT_DIR}
+echo ">>>>> INIT ${DWL_USER_NAME} <<<<<";
+/tmp/dwl-init-user.sh;
 
+chmod -R 700 ${DWL_INIT_DIR}
 echo ">>>>> LIST /TMP INITIALIZATION FILES <<<<<";
 ls -lah ${DWL_INIT_DIR} | sort -r;
 echo "";
