@@ -40,5 +40,8 @@ su ${DWL_USER_NAME}
 
 if [ "${DWL_INIT}" = "app" ] || [ "${DWL_KEEP_RUNNING}" = "true" ]; then
     echo "> KEEP APP ACTIVE";
+    echo "";
     tail -f /dev/null;
+else
+    echo "";
 fi
