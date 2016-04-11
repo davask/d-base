@@ -4,10 +4,10 @@ MAINTAINER davask <contact@davaskweblimited.com>
 # declare if by default we keep container running
 ENV DWL_KEEP_RUNNING false
 
-RUN cut -d: -f1 /etc/passwd | grep ^davask$
 
 # declare main user
 ENV DWL_USER_NAME dwl
+RUN cut -d: -f1 /etc/passwd | grep ^$DWL_USER_NAME$
 RUN adduser --disabled-password --gecos "" $DWL_USER_NAME
 
 # declare user dir
