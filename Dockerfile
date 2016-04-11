@@ -7,7 +7,7 @@ ENV DWL_KEEP_RUNNING false
 
 # declare main user
 ENV DWL_USER_NAME dwl
-RUN if [ "$DWL_USER_NAME" != "`cut -d: -f1 /etc/passwd | grep ^$DWL_USER_NAME$`" ]; then adduser --disabled-password --gecos "" $DWL_USER_NAME; else ls /home; fi
+RUN if [ "$DWL_USER_NAME" != "`cut -d: -f1 /etc/passwd | grep ^$DWL_USER_NAME$`" ]; then adduser --disabled-password --gecos "" $DWL_USER_NAME; else ls -la /home; fi
 
 # declare user dir
 ENV DWL_USER_DIR /home/$DWL_USER_NAME
