@@ -16,7 +16,6 @@ ENV DWL_INIT app
 # Declare instantiation counter
 ENV DWL_INIT_COUNT 0
 
-
 # Declare instantiation dir
 ENV DWL_INIT_DIR /tmp/dwl-$DWL_INIT
 # Copy instantiation specific file
