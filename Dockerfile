@@ -1,4 +1,4 @@
-FROM davask/d-ubuntu:master
+FROM davask/d-ubuntu:latest
 MAINTAINER davask <contact@davaskweblimited.com>
 
 # declare main user
