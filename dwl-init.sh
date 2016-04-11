@@ -1,5 +1,5 @@
 #!/bin/bash
-. ${PWD}/dwl-init-user.sh
+. /tmp/dwl-init-user.sh
 
 chmod -R 700 ${DWL_INIT_DIR}
 echo "##### LIST OF ${DWL_INIT_DIR} #####";
