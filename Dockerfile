@@ -17,7 +17,7 @@ ENV DWL_INIT_DIR $DWL_TMP_DIR/dwl-$DWL_INIT
 RUN test -d "$DWL_INIT_DIR" || mkdir -p "$DWL_INIT_DIR"
 ENV DWL_INIT_COUNTER=0
 
-COPY ./ubuntu.sh $DWL_INIT_DIR/$DWL_INIT_COUNTER-ubuntu.sh
+COPY ./base.sh $DWL_INIT_DIR/$DWL_INIT_COUNTER-base.sh
 RUN DWL_INIT_COUNTER=$(($DWL_INIT_COUNTER+1))
 
 COPY ./dwl-init.sh $DWL_TMP_DIR/dwl-init.sh
