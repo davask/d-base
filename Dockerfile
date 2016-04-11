@@ -4,6 +4,7 @@ MAINTAINER davask <contact@davaskweblimited.com>
 # declare main user
 ENV DWL_USER_NAME dwl
 RUN adduser --disabled-password --gecos "" $DWL_USER_NAME
+ENV DWL_KEEP_RUNNING false
 
 # declare volumes
 ENV DWL_USER_DIR /home/$DWL_USER_NAME
