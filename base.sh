@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "Base container initialized";
+echo "Dwl base container initialized";
