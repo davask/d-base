@@ -12,8 +12,6 @@ do
     ${DWL_INIT_DIR}/${init};
     echo "";
 done;
-unset DWL_INIT_COUNTER
-unset DWL_INIT
 echo "##### END OF INITIALIZATION #####";
 echo "";
 
