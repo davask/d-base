@@ -25,6 +25,8 @@ COPY ./base.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-base.sh
 RUN DWL_INIT_COUNT=$(($DWL_INIT_COUNT+1))
 
 # Declare instantiation generic file
+COPY ./user.sh /tmp/dwl-init-user.sh
+RUN chmod 700 /tmp/dwl-init-user.sh
 COPY ./dwl-init.sh /tmp/dwl-init.sh
 RUN chmod 700 /tmp/dwl-init.sh
 
