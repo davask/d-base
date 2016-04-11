@@ -24,9 +24,6 @@ COPY ./base.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-base.sh
 # update counter for next container
 RUN DWL_INIT_COUNT=$(($DWL_INIT_COUNT+1))
 
-# Declare instantiation user file
-COPY ./user.sh /tmp/dwl-init-user.sh
-RUN chmod 700 /tmp/dwl-init-user.sh
 # Declare instantiation generic file
 COPY ./dwl-init.sh /tmp/dwl-init.sh
 RUN chmod 700 /tmp/dwl-init.sh
