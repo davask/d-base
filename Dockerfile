@@ -23,7 +23,7 @@ ENV DWL_INIT_DIR /tmp/dwl-$DWL_INIT
 # Copy instantiation specific file
 COPY ./base.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-base.sh
 # update counter for next container
-RUN DWL_INIT_COUNT=$(($DWL_INIT_COUNT+1))
+ENV DWL_INIT_COUNT $(($DWL_INIT_COUNT+1))
 
 # Declare instantiation generic file
 COPY ./app.sh /tmp/dwl-init-app.sh
