@@ -14,6 +14,11 @@ echo "update DWL_USER_DIR > ${DWL_USER_DIR}"
 # declare tmp dir
 export DWL_USER_DIR_TMP=${DWL_USER_DIR}/tmp
 echo "update DWL_USER_DIR_TMP > ${DWL_USER_DIR_TMP}"
-test -d ${DWL_USER_DIR_TMP} || mkdir -p ${DWL_USER_DIR_TMP}
+if [ ! -d ${DWL_USER_DIR_TMP} ]; then
+    mkdir -p ${DWL_USER_DIR_TMP};
+    echo 'Directory ${DWL_USER_DIR_TMP} created';
+else
+    echo 'Directory ${DWL_USER_DIR_TMP} already exists';
+fi
 echo "##### END OF ${DWL_USER_NAME} INIT #####";
 echo "";

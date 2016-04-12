@@ -1,6 +1,8 @@
 #!/bin/bash
 . /tmp/dwl-init-user.sh
 
+. /tmp/dwl-init-app.sh
+
 chmod -R 700 ${DWL_INIT_DIR}
 echo "##### LIST OF ${DWL_INIT_DIR} #####";
 ls -lah ${DWL_INIT_DIR} | sort -r;
