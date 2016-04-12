@@ -1,4 +1,6 @@
 #!/bin/bash
+. /tmp/dwl-init-functions.sh
+
 . /tmp/dwl-init-user.sh
 
 . /tmp/dwl-init-app.sh
