@@ -13,10 +13,10 @@ if [ -d /var/www ]; then
             rm -rdf /var/www/html
             echo "> Directory /var/www/html removed";
         fi
+        chown -R ${DWL_USER_NAME}:${APACHE_RUN_GROUP} ${DWL_USER_DIR}
+        find ${DWL_USER_DIR}/${DWL_APP_DIR} -type d -exec chmod 775 {} \;
+        find ${DWL_USER_DIR}/${DWL_APP_DIR} -type f -exec chmod 664 {} \;
         ln -s ${DWL_USER_DIR}/${DWL_APP_DIR} /var/www/html
-        chown :www-data -R /var/www/html
-        find /var/www/html -type d -exec chmod 775 {} \;
-        find /var/www/html -type f -exec chmod 664 {} \;
 
         echo "> Link ${DWL_USER_DIR}/${DWL_APP_DIR} to /var/www/html created";
     else

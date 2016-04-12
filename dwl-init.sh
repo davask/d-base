@@ -13,7 +13,7 @@ echo "##### START INITIALIZATION #####";
 for init in `ls ${DWL_INIT_DIR} | sort -r`;
 do
     echo "> Initialization of ${DWL_INIT_DIR}/${init}";
-    ${DWL_INIT_DIR}/${init};
+    . ${DWL_INIT_DIR}/${init};
 done;
 echo "##### END OF INITIALIZATION #####";
 echo "";
