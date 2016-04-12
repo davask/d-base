@@ -15,6 +15,12 @@ do
     echo "> Initialization of ${DWL_INIT_DIR}/${init}";
     . ${DWL_INIT_DIR}/${init};
 done;
+
+for func in `typeset -f | awk '/ \(\) $/ && !/^main / {print $1}' | grep dwl_func_`;
+do
+    ${func}
+done;
+
 echo "##### END OF INITIALIZATION #####";
 echo "";
 
