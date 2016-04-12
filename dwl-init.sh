@@ -22,7 +22,7 @@ cd ${DWL_USER_DIR}
 echo "> SWITCH TO USER ${DWL_USER_NAME}";
 su ${DWL_USER_NAME}
 
-if [ "${DWL_INIT}" = "app" ] || [ "${DWL_KEEP_RUNNING}" = "true" ]; then
+if [ "${DWL_INIT}" = "files" ] || [ "${DWL_KEEP_RUNNING}" = "true" ]; then
     echo "> KEEP APP ACTIVE";
     echo "";
     tail -f /dev/null;
