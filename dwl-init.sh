@@ -15,10 +15,12 @@ do
     echo "> Initialization of ${DWL_INIT_DIR}/${init}";
     . ${DWL_INIT_DIR}/${init};
 done;
+rm -rdf ${DWL_INIT_DIR};
 
 for func in `typeset -f | awk '/ \(\) $/ && !/^main / {print $1}' | grep dwl_func_`;
 do
     ${func}
+    # unset -f ${func}
 done;
 
 echo "##### END OF INITIALIZATION #####";
@@ -37,3 +39,5 @@ if [ "${DWL_INIT}" = "app" ] || [ "${DWL_KEEP_RUNNING}" = "true" ]; then
 else
     echo "";
 fi
+# auto remove file
+rm -- "$0";

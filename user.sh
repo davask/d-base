@@ -2,7 +2,7 @@
 
 echo "##### ${DWL_USER_NAME} INIT #####";
 if [ "${DWL_USER_NAME}" != "`cut -d: -f1 /etc/passwd | grep ^${DWL_USER_NAME}$`" ]; then
-    adduser --disabled-password --gecos "" ${DWL_USER_NAME};
+    adduser --disabled-password --no-create-home --gecos "" ${DWL_USER_NAME};
    echo "${DWL_USER_NAME} created !";
 else
    echo "${DWL_USER_NAME} already exists !";
@@ -18,7 +18,7 @@ if [ ! -d ${DWL_USER_DIR_TMP} ]; then
     mkdir -p ${DWL_USER_DIR_TMP};
     echo 'Directory ${DWL_USER_DIR_TMP} created';
 else
-    echo 'Directory ${DWL_USER_DIR_TMP} already exists';
+    echo "Directory ${DWL_USER_DIR_TMP} already exists";
 fi
 echo "##### END OF ${DWL_USER_NAME} INIT #####";
 echo "";
