@@ -12,6 +12,8 @@ ENV DWL_APP_DIR files
 ENV DWL_USER_DIR /home/$DWL_USER_NAME
 # Declare user tmp dir
 ENV DWL_USER_DIR_TMP $DWL_USER_DIR/tmp
+# Declare user log dir
+ENV DWL_USER_DIR_LOG $DWL_USER_DIR/log
 
 # Declare instantiation type
 ENV DWL_INIT app
@@ -26,10 +28,15 @@ COPY ./base.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-base.sh
 ENV DWL_INIT_COUNT $(($DWL_INIT_COUNT+1))
 
 # Declare instantiation generic file
-COPY ./app.sh /tmp/dwl-init-app.sh
-RUN chmod 700 /tmp/dwl-init-app.sh
+COPY ./functions.sh /tmp/dwl-init-functions.sh
+RUN chmod 700 /tmp/dwl-init-functions.sh
+
 COPY ./user.sh /tmp/dwl-init-user.sh
 RUN chmod 700 /tmp/dwl-init-user.sh
+
+COPY ./app.sh /tmp/dwl-init-app.sh
+RUN chmod 700 /tmp/dwl-init-app.sh
+
 COPY ./dwl-init.sh /tmp/dwl-init.sh
 RUN chmod 700 /tmp/dwl-init.sh
 
