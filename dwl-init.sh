@@ -21,7 +21,7 @@ rm -rdf ${DWL_INIT_DIR};
 
 for func in `typeset -f | awk '/ \(\) $/ && !/^main / {print $1}' | grep dwl_func_`;
 do
-    ${func}
+    ${func} "${func}"
     # unset -f ${func}
 done;
 
