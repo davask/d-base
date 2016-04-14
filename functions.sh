@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # generating dir for user folder
-function dwl_func_mkdir() {
+dwl_func_mkdir() {
 
     if [ "$1" != '' ] && [ "$2" != '' ]; then
 
