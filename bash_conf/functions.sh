@@ -24,3 +24,4 @@ dwl_func_mkdir() {
 }
 
 echo "> Functions uploaded";
+echo "";
