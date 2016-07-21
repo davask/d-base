@@ -19,7 +19,7 @@ ENV DWL_USER_DIR_TMP $DWL_USER_DIR/tmp
 ENV DWL_USER_DIR_LOG $DWL_USER_DIR/log
 
 # Declare instantiation type
-ENV DWL_INIT app
+ENV DWL_INIT base
 
 # Declare instantiation counter
 ENV DWL_INIT_COUNT 0
