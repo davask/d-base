@@ -11,7 +11,7 @@ fi
 
 # declare user dir
 export DWL_USER_DIR=/home/${DWL_USER_NAME}
-echo ">> update DWL_USER_DIR > ${DWL_USER_DIR}"
+echo "> update DWL_USER_DIR > ${DWL_USER_DIR}"
 
 # declare extra user tmp dir
 dwlExtraUserDirs=( "tmp" "log" );
