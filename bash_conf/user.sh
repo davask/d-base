@@ -21,5 +21,5 @@ do
 done;
 unset dwlExtraUserDirs;
 
-echo "- - -";
+echo "> User uploaded";
 echo "";

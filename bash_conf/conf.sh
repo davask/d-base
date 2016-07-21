@@ -6,9 +6,10 @@
 . /tmp/dwl-init/app.sh
 
 chmod -R 700 ${DWL_INIT_DIR}
-echo "##### LIST OF ${DWL_INIT_DIR} #####";
+
+echo "> List of ${DWL_INIT_DIR}";
 ls -lah ${DWL_INIT_DIR} | sort -r;
-echo "##### END OF LIST OF ${DWL_INIT_DIR} #####";
+echo "> List uploaded";
 echo "";
 
 echo "##### START INITIALIZATION #####";
@@ -30,18 +31,16 @@ done;
 echo "##### END OF INITIALIZATION #####";
 echo "";
 
-echo "> ACCESS WORKDIR ${DWL_USER_DIR}";
-cd ${DWL_USER_DIR}
+# echo "> ACCESS WORKDIR ${DWL_USER_DIR}";
+# cd ${DWL_USER_DIR}
 
 # echo "> SWITCH TO USER ${DWL_USER_NAME}";
 # su ${DWL_USER_NAME}
 
 if [ "${DWL_INIT}" = "app" ] || [ "${DWL_KEEP_RUNNING}" = "true" ]; then
     echo "> KEEP APP ACTIVE";
-    echo "";
     tail -f /dev/null;
-else
-    echo "";
 fi
+
 # auto remove file
-rm -- "$0";
+# rm -- "$0";

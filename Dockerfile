@@ -35,5 +35,7 @@ COPY ./base.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-base.sh
 
 RUN chmod 700 -R /tmp
 
+WORKDIR $DWL_USER_DIR
+
 # Start instantiation
 CMD ["/tmp/dwl-init/conf.sh"]
