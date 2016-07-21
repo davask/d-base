@@ -17,11 +17,14 @@ do
     echo "> Initialization of ${DWL_INIT_DIR}/${init}";
     . ${DWL_INIT_DIR}/${init};
 done;
-rm -rdf ${DWL_INIT_DIR};
+# rm -rdf ${DWL_INIT_DIR};
 
+#todo : add log + sendmail + create screenshot
+# src : https://github.com/blueimp/cron/blob/master/crontab
+# src : https://github.com/blueimp/container-tools
 for func in `typeset -f | awk '/ \(\) $/ && !/^main / {print $1}' | grep dwl_func_`;
 do
-    ${func} "${func}"
+    echo "${func}"
     # unset -f ${func}
 done;
 

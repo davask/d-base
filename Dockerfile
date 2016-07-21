@@ -5,7 +5,7 @@ MAINTAINER davask <contact@davaskweblimited.com>
 ENV DWL_KEEP_RUNNING false
 # declare main user
 ENV DWL_USER_NAME dwl
-# ENV DWL_USER_PASSWD dwl
+ENV DWL_USER_PASSWD dwl
 
 # declare default app dir
 ENV DWL_APP_DIR files
