@@ -1,4 +1,4 @@
-FROM davask/d-ubuntu:latest
+FROM davask/d-ubuntu:14.04
 MAINTAINER davask <contact@davaskweblimited.com>
 
 # declare if by default we keep container running
