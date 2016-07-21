@@ -1,9 +1,9 @@
 #!/bin/bash
-. /tmp/dwl-init-functions.sh
+. /tmp/dwl-init/functions.sh
 
-. /tmp/dwl-init-user.sh
+. /tmp/dwl-init/user.sh
 
-. /tmp/dwl-init-app.sh
+. /tmp/dwl-init/app.sh
 
 chmod -R 700 ${DWL_INIT_DIR}
 echo "##### LIST OF ${DWL_INIT_DIR} #####";
@@ -17,7 +17,6 @@ do
     echo "> Initialization of ${DWL_INIT_DIR}/${init}";
     . ${DWL_INIT_DIR}/${init};
 done;
-# rm -rdf ${DWL_INIT_DIR};
 
 #todo : add log + sendmail + create screenshot
 # src : https://github.com/blueimp/cron/blob/master/crontab
