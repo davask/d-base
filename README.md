@@ -3,6 +3,11 @@ base container for all
 
 Default ENV values
 
+Define Default LANG LOCAL
+> DWL_LOCAL en_US.UTF-8
+
+- - -
+
 Force container to keep running
 > DWL_KEEP_RUNNING false
 
