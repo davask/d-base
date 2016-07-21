@@ -19,6 +19,7 @@ do
     . ${DWL_INIT_DIR}/${init};
 done;
 
+echo "> List of func to execute";
 #todo : add log + sendmail + create screenshot
 # src : https://github.com/blueimp/cron/blob/master/crontab
 # src : https://github.com/blueimp/container-tools
