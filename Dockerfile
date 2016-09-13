@@ -26,6 +26,7 @@ ENV DWL_WORKDIR $DWL_USER_DIR
 # declare superadmin group name
 RUN groupadd $DWL_GROUP_ADMIN;
 RUN usermod -a -G $DWL_GROUP_ADMIN $DWL_USER_NAME;
+RUN echo "$DWL_GROUP_ADMIN    ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$DWL_GROUP_ADMIN
 
 # Declare instantiation type
 ENV DWL_INIT base
