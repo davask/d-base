@@ -23,11 +23,6 @@ ENV DWL_USER_DIR_LOG $DWL_USER_DIR/log
 # declare default WORKDIR
 ENV DWL_WORKDIR $DWL_USER_DIR
 
-# declare superadmin group name
-RUN groupadd $DWL_GROUP_ADMIN;
-RUN usermod -a -G $DWL_GROUP_ADMIN $DWL_USER_NAME;
-RUN echo "$DWL_GROUP_ADMIN    ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$DWL_GROUP_ADMIN
-
 # Declare instantiation type
 ENV DWL_INIT base
 
@@ -44,6 +39,20 @@ COPY ./bash_conf /tmp/dwl-init
 COPY ./base.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-base.sh
 
 RUN chmod 700 -R /tmp
+
+# create new user
+RUN useradd -ms /bin/bash $DWL_USER_NAME
+
+# create superadmin group
+RUN groupadd $DWL_GROUP_ADMIN;
+
+# define superadmin permissions
+RUN echo "$DWL_GROUP_ADMIN    ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$DWL_GROUP_ADMIN
+
+# add superadmin group to user
+RUN usermod -a -G $DWL_GROUP_ADMIN $DWL_USER_NAME;
+
+USER $DWL_USER_NAME
 
 WORKDIR $DWL_WORKDIR
 
