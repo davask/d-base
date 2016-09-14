@@ -7,7 +7,6 @@ ENV DWL_KEEP_RUNNING false
 # declare main user
 ENV DWL_USER_NAME dwl
 ENV DWL_USER_PASSWD dwl
-
 # declare default app dir
 ENV DWL_APP_DIR files
 
@@ -20,16 +19,13 @@ ENV DWL_USER_DIR_LOG $DWL_USER_DIR/log
 
 # Declare instantiation type
 ENV DWL_INIT base
-
 # Declare instantiation counter
 ENV DWL_INIT_COUNT 0
-
 # Declare instantiation dir
 ENV DWL_INIT_DIR /tmp/dwl-$DWL_INIT
 
 # Declare instantiation conf files
 COPY ./bash_conf /tmp/dwl-init
-
 # Copy instantiation specific file
 COPY ./base.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-base.sh
 

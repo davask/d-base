@@ -1,15 +1,18 @@
 # d-base
-base container for all
+base container for all ubuntu base container
 
-Default ENV values
+## Default ENV values
 
 Define Default LANG LOCAL
 > DWL_LOCAL en_US.UTF-8
 
+## LABEL
+dwl.server.os="ubuntu 16.04"
+
 - - -
 
 Force container to keep running
-> DWL_KEEP_RUNNING false
+> DWL_KEEP_RUNNING false|true
 
 Define username:passwd for ftp access
 > DWL_USER_NAME dwl
@@ -17,6 +20,3 @@ Define username:passwd for ftp access
 
 Define dirname to receive app files
 > DWL_APP_DIR files
-
-Define instantiation type
-> DWL_INIT app
