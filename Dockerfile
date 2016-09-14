@@ -7,6 +7,8 @@ ENV DWL_KEEP_RUNNING false
 # declare main user
 ENV DWL_USER_NAME dwl
 ENV DWL_USER_PASSWD dwl
+# declare superadmin group name
+ENV DWL_GROUP_ADMIN superadmin
 # declare default app dir
 ENV DWL_APP_DIR files
 
@@ -16,6 +18,9 @@ ENV DWL_USER_DIR /home/$DWL_USER_NAME
 ENV DWL_USER_DIR_TMP $DWL_USER_DIR/tmp
 # Declare user log dir
 ENV DWL_USER_DIR_LOG $DWL_USER_DIR/log
+
+# declare default WORKDIR
+ENV DWL_WORKDIR $DWL_USER_DIR
 
 # Declare instantiation type
 ENV DWL_INIT base
@@ -31,7 +36,21 @@ COPY ./base.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-base.sh
 
 RUN chmod 700 -R /tmp
 
-WORKDIR $DWL_USER_DIR
+# create new user
+RUN useradd -ms /bin/bash $DWL_USER_NAME
+
+# create superadmin group
+RUN groupadd $DWL_GROUP_ADMIN;
+
+# define superadmin permissions
+RUN echo "$DWL_GROUP_ADMIN    ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/$DWL_GROUP_ADMIN
+
+# add superadmin group to user
+RUN usermod -a -G $DWL_GROUP_ADMIN $DWL_USER_NAME;
+
+USER $DWL_USER_NAME
+
+WORKDIR $DWL_WORKDIR
 
 # Start instantiation
 CMD ["/tmp/dwl-init/conf.sh"]
