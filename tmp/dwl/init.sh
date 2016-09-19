@@ -26,6 +26,8 @@ if [ "${DWL_SSH_ACCESS}" = "true" ]; then
 fi
 echo ">> Ubuntu initialized";
 
+echo ">> Base initialized";
+
 if [ "${DWL_KEEP_RUNNING}" = "true" ]; then
     echo "> Kept container active";
     tail -f /dev/null;

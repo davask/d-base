@@ -5,10 +5,10 @@ d-base:
     DWL_LOCAL: en_US.UTF-8
     DWL_USER_NAME: username
     DWL_USER_PASSWD: secret
-    DWL_SSH_ACCESS: true
+    DWL_SSH_ACCESS: false
   labels:
     io.rancher.container.pull_image: always
     io.rancher.scheduler.affinity:host_label: dwl=dwlComPrivate
   tty: true
-  image: davask/d-base:14.04
+  image: davask/d-base:u14.04
   stdin_open: true

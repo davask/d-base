@@ -11,7 +11,10 @@
 > DWL_USER_PASSWD secret
 
 ### Define if ssh and sftp access are accepted
-> ENV DWL_SSH_ACCESS false
+> DWL_SSH_ACCESS false
+
+### Base activation
+> DWL_SENDMAIL false
 
 ## LABEL
 > dwl.server.os="ubuntu 14.04"
