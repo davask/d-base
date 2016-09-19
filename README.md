@@ -14,7 +14,6 @@
 > DWL_SSH_ACCESS false
 
 ### Base activation
-> DWL_SENDMAIL false
 
 ## LABEL
 > dwl.server.os="ubuntu 14.04"
