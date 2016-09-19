@@ -1,4 +1,4 @@
-d-ubuntu:
+d-base:
   ports:
   - 65500:22/tcp
   environment:
@@ -10,5 +10,5 @@ d-ubuntu:
     io.rancher.container.pull_image: always
     io.rancher.scheduler.affinity:host_label: dwl=dwlComPrivate
   tty: true
-  image: davask/d-ubuntu:14.04
+  image: davask/d-base:14.04
   stdin_open: true

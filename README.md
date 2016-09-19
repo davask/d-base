@@ -15,3 +15,5 @@
 
 ## LABEL
 > dwl.server.os="ubuntu 14.04"
+
+> dwl.server.base="ubuntu 14.04"
