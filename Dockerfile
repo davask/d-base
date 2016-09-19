@@ -1,5 +1,5 @@
 FROM davask/d-ubuntu:14.04
-MAINTAINER davask <admin@davaskweblimited.com>
+MAINTAINER davask <docker@davaskweblimited.com>
 LABEL dwl.server.base="ubuntu 14.04"
 
 # Update packages
