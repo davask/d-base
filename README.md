@@ -6,4 +6,4 @@ see [FROM IMAGE README.md](https://github.com/davask/d-ubuntu)
 
 ## LABEL
 
-> dwl.server.base="ubuntu 14.04"
+> dwl.server.base="ubuntu 12.04"

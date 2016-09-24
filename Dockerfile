@@ -1,6 +1,6 @@
-FROM davask/d-ubuntu:14.04
+FROM davask/d-ubuntu:12.04
 MAINTAINER davask <docker@davaskweblimited.com>
-LABEL dwl.server.base="ubuntu 14.04"
+LABEL dwl.server.base="ubuntu 12.04"
 
 # Update packages
 RUN /bin/bash -c 'apt-get update;'
