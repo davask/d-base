@@ -11,6 +11,7 @@ RUN /bin/bash -c 'apt-get install -y wget'
 RUN /bin/bash -c 'apt-get install -y unzip'
 RUN /bin/bash -c 'apt-get install -y git'
 RUN /bin/bash -c 'apt-get install -y acl'
+RUN /bin/bash -c 'apt-get install -y python-software-properties'
 RUN /bin/bash -c 'rm -rf /var/lib/apt/lists/*'
 
 COPY ./tmp/dwl/init.sh /tmp/dwl/init.sh
