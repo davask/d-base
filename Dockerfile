@@ -2,8 +2,6 @@ FROM davask/d-ubuntu:14.04
 MAINTAINER davask <docker@davaskweblimited.com>
 LABEL dwl.server.base="ubuntu 14.04"
 
-ENV GOSU_VERSION 1.7
-
 # Update packages
 RUN /bin/bash -c 'apt-get update;'
 RUN /bin/bash -c 'apt-get install -y acl'
