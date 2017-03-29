@@ -1,4 +1,15 @@
-d-base:
+#/usr/bin/env bash
+
+branch=${1};
+parentBranch=${2};
+rootDir=${3};
+buildDir=${4};
+
+######################
+# docker-compose.yml #
+######################
+
+echo "d-base:
   ports:
   - 65502:22/tcp
   environment:
@@ -13,7 +24,9 @@ d-base:
     io.rancher.scheduler.affinity:host_label: dwl=dwlComPrivate
   tty: true
   hostname: private.davaskweblimited.com
-  image: davask/d-base:u14.04
+  image: davask/d-base:${branch}
   volumes:
-  - /home/dwl/docker-images/base/d-base/home/username:/home/username
+  - ${rootDir}/volumes/home/username:/home/username
+" > ${rootDir}/volumes/docker-compose.yml
 
+echo "docker-compose.yml generated with base:${branch}";

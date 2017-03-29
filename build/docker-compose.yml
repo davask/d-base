@@ -15,5 +15,5 @@ d-base:
   hostname: private.davaskweblimited.com
   image: davask/d-base:u14.04
   volumes:
-  - /home/dwl/docker-images/base/d-base/home/username:/home/username
+  - /home/dwl/docker-images/base/d-base/build/home/username:/home/username
 

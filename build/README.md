@@ -6,5 +6,5 @@ see [FROM IMAGE README.md](https://github.com/davask/d-ubuntu)
 
 ## LABEL
 
-> dwl.server.base="base:u14.04"
+> dwl.server.base="base:/home/dwl/docker-images/base/d-base"
 

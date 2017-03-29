@@ -1,6 +1,6 @@
-FROM davask/d-ubuntu:14.04
+FROM davask/d-ubuntu:/home/dwl/docker-images/base/d-base
 MAINTAINER davask <docker@davaskweblimited.com>
-LABEL dwl.server.base="base u14.04"
+LABEL dwl.server.base="base /home/dwl/docker-images/base/d-base"
 
 # Update packages
 RUN apt-get update
