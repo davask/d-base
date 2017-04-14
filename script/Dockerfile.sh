@@ -28,7 +28,6 @@ RUN apt-get install -y git
 # Sys::Hostname
 # Data::Dumper
 RUN apt-get install -y perl
-RUN apt-get install -y python-software-properties
 RUN apt-get install -y unzip
 RUN rm -rf /var/lib/apt/lists/*
 
