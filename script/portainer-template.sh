@@ -51,4 +51,4 @@ echo '[
     "volumes": ["/home/username"]
   }
 ]
-' >> ${rootDir}/portainer-template.json
+' > ${rootDir}/portainer-template.json
