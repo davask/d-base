@@ -10,6 +10,6 @@ echo ">> Ubuntu initialized";
 echo ">> Base initialized";
 
 . ${dwlDir}/permission.sh
-echo ">> permission assigned";
+echo ">> Permission assigned";
 
 . ${dwlDir}/keeprunning.sh
