@@ -1,5 +1,6 @@
 FROM davask/d-ubuntu:14.04
 MAINTAINER davask <docker@davaskweblimited.com>
+USER root
 LABEL dwl.server.base="base u14.04"
 
 # Update packages
@@ -21,4 +22,5 @@ RUN apt-get install -y unzip
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY ./build/dwl/init.sh /dwl/init.sh
+USER admin
 

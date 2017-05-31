@@ -11,6 +11,7 @@ buildDir=${4};
 
 echo "FROM davask/d-ubuntu:${parentBranch}
 MAINTAINER davask <docker@davaskweblimited.com>
+USER root
 LABEL dwl.server.base=\"base ${branch}\"" > ${rootDir}/Dockerfile
 echo '
 # Update packages
@@ -32,6 +33,7 @@ RUN apt-get install -y unzip
 RUN rm -rf /var/lib/apt/lists/*
 
 COPY ./build/dwl/init.sh /dwl/init.sh
+USER admin
 ' >> ${rootDir}/Dockerfile
 
 echo "Dockerfile generated with base:${branch}";
