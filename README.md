@@ -16,7 +16,7 @@
 - /home/username
 ## LABEL
 
-- dwl.server.os="base u14.04"
+- dwl.server.os="ubuntu u14.04"
 
 - dwl.server.base="base u14.04"
 
