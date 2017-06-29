@@ -22,5 +22,5 @@ apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 COPY ./build/dwl/init.sh /dwl/init.sh
-RUN chown root:sudo -R /dwl
+RUN chmod +x /dwl/init.sh && chown root:sudo -R /dwl
 USER admin
