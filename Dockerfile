@@ -1,17 +1,26 @@
 FROM davask/d-ubuntu:12.04
 MAINTAINER davask <docker@davaskweblimited.com>
-LABEL dwl.server.base="ubuntu 12.04"
+USER root
+LABEL dwl.server.base="base u12.04"
 
 # Update packages
-RUN /bin/bash -c 'apt-get update;'
-RUN /bin/bash -c 'apt-get install -y apt-utils'
-RUN /bin/bash -c 'apt-get install -y build-essential'
-RUN /bin/bash -c 'apt-get install -y curl'
-RUN /bin/bash -c 'apt-get install -y wget'
-RUN /bin/bash -c 'apt-get install -y unzip'
-RUN /bin/bash -c 'apt-get install -y git'
-RUN /bin/bash -c 'apt-get install -y acl'
-RUN /bin/bash -c 'apt-get install -y python-software-properties'
-RUN /bin/bash -c 'rm -rf /var/lib/apt/lists/*'
+RUN apt-get update && \
+apt-get install -y \
+acl \
+apt-utils \
+binutils \
+build-essential \
+cron \
+curl \
+expect \
+git \
+perl \
+unzip
+RUN apt-get upgrade -y && \
+apt-get autoremove -y && \
+apt-get clean && \
+rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY ./tmp/dwl/init.sh /tmp/dwl/init.sh
+COPY ./build/dwl/init.sh /dwl/init.sh
+RUN chown root:sudo -R /dwl
+USER admin

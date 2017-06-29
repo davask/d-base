@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Base d8.8",
+    "description": "Debian 8.8 pre-configured",
+    "logo": "http://www.unixstickers.com/image/cache/data/stickers/gnulinux/tux_sh-600x600.png",
+    "image": "davask/d-base:u12.04",
+    "ports": [
+        "22/tcp"
+    ],
+    "env": [
+        {
+            "name": "DWL_LOCAL_LANG",
+            "label": "Local lang [en_US:en]"
+        },{
+            "name": "DWL_LOCAL",
+            "label": "Local [en_US.UTF-8]"
+        },{
+            "name": "DWL_USER_NAME",
+            "label": "Username [username]"
+        },{
+            "name": "DWL_SSH_ACCESS",
+            "label": "Enable ssh access [false]"
+        },{
+            "name": "DWL_USER_ID",
+            "label": "User id [1000]"
+        },{
+            "name": "DWL_USER_PASSWD",
+            "label": "User password for ssh access [secret]"
+        }
+    ],
+    "volumes": [
+        "/home/username"
+    ]
+  }
+]
