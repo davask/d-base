@@ -1,9 +1,24 @@
 # dockerfile
 
-see [FROM IMAGE README.md](https://github.com/davask/d-ubuntu)
+## Exposed port
 
-### Base activation
+- 22
+## Default ENV values
 
+- DWL_LOCAL_LANG: 'en_US:en'
+- DWL_LOCAL: 'en_US.UTF-8'
+- DWL_USER_NAME: 'username'
+- DWL_SSH_ACCESS: 'false'
+- DWL_USER_ID: '1000'
+- DWL_USER_PASSWD: 'secret'
+## Available volumes
+
+- /home/username
 ## LABEL
 
-> dwl.server.base="ubuntu 16.04"
+- dwl.server.os="ubuntu u16.04"
+
+- dwl.server.base="base u16.04"
+
+## EXTRA
+
