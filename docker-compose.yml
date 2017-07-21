@@ -15,7 +15,7 @@ services:
     tty: true
     stdin_open: true
     hostname: localhost
-    image: davask/d-base:d8.8
+    image: davask/d-base:u16.04
     networks:
       - dwlhost
     volumes:

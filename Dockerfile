@@ -1,7 +1,7 @@
-FROM davask/d-debian:8.8
+FROM davask/d-ubuntu:16.04
 MAINTAINER davask <docker@davaskweblimited.com>
 USER root
-LABEL dwl.server.base="base d8.8"
+LABEL dwl.server.base="base u16.04"
 
 # Update packages
 RUN apt-get update && \

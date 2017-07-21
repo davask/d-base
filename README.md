@@ -1,13 +1,13 @@
 # dockerfile
 
-[![[dwl] base:d8.8 in prod][badge-shields]](https://hub.docker.com/r/davask/d-base/)
-[![[dwl] base:d8.8 license][badge-license]](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdavask%2Fd-base?ref=badge_shield)
+[![[dwl] base:u16.04 in prod][badge-shields]](https://hub.docker.com/r/davask/d-base/)
+[![[dwl] base:u16.04 license][badge-license]](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdavask%2Fd-base?ref=badge_shield)
 
-[![[dwl] base:d8.8 image][badge-docker]](https://hub.docker.com/r/davask/d-base/)
+[![[dwl] base:u16.04 image][badge-docker]](https://hub.docker.com/r/davask/d-base/)
 
-[badge-docker]: https://dockeri.co/image/davask/d-base "[dwl] base:d8.8 image"
-[badge-shields]: https://img.shields.io/badge/davask%2Fd--base-env_prod-brightgreen.svg?style=flat "[dwl] base:d8.8 in prod"
-[badge-license]: https://img.shields.io/badge/davask%2Fd--base-license_MIT-brightgreen.svg?style=flat "[dwl] base:d8.8 license"
+[badge-docker]: https://dockeri.co/image/davask/d-base "[dwl] base:u16.04 image"
+[badge-shields]: https://img.shields.io/badge/davask%2Fd--base-env_prod-brightgreen.svg?style=flat "[dwl] base:u16.04 in prod"
+[badge-license]: https://img.shields.io/badge/davask%2Fd--base-license_MIT-brightgreen.svg?style=flat "[dwl] base:u16.04 license"
 
 ## Exposed port
 
@@ -26,9 +26,9 @@
 - /home/host
 ## LABEL
 
-- dwl.server.os="debian d8.8"
+- dwl.server.os="ubuntu u16.04"
 
-- dwl.server.base="base d8.8"
+- dwl.server.base="base u16.04"
 
 ## EXTRA
 
