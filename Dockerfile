@@ -15,12 +15,15 @@ curl \
 expect \
 git \
 perl \
+htop \
 unzip
 RUN apt-get upgrade -y && \
 apt-get autoremove -y && \
 apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY ./build/dwl/init.sh /dwl/init.sh
+COPY ./build/dwl/custom.sh \
+./build/dwl/init.sh \
+/dwl/
 RUN chmod +x /dwl/init.sh && chown root:sudo -R /dwl
 USER admin

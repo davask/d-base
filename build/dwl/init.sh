@@ -14,5 +14,6 @@ echo ">> Base initialized";
 . ${dwlDir}/permission.sh
 echo ">> Permission assigned";
 
+. ${dwlDir}/custom.sh
 
 tail -f /dev/null;
