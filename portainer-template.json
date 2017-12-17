@@ -3,7 +3,7 @@
     "title": "Base d8.8",
     "description": "Debian 8.8 pre-configured",
     "logo": "http://www.unixstickers.com/image/cache/data/stickers/gnulinux/tux_sh-600x600.png",
-    "image": "davask/d-base:u16.04",
+    "image": "davask/d-base:d8.8",
     "ports": [
         "22/tcp"
     ],
