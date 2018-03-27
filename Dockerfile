@@ -1,7 +1,7 @@
-FROM davask/d-debian:8.8
+FROM davask/d-debian:8.x
 MAINTAINER davask <docker@davaskweblimited.com>
 USER root
-LABEL dwl.server.base="base d8.8"
+LABEL dwl.server.base="base d8.x"
 
 # Update packages
 RUN apt-get update && \
@@ -17,6 +17,7 @@ git \
 perl \
 htop \
 unzip
+
 RUN apt-get upgrade -y && \
 apt-get autoremove -y && \
 apt-get clean && \
