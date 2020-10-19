@@ -1,6 +1,6 @@
 FROM davask/d-debian:9.x
 
-MAINTAINER davask <docker@davaskweblimited.com>
+MAINTAINER davask <admin@davask.com>
 USER root
 # Update packages
 RUN apt update && \
